@@ -1,0 +1,71 @@
+﻿@model IEnumerable<HomeSearchApplication.Models.Homes>
+@{
+    ViewBag.Title = "SearchResults";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<header><h2>Your Homes</h2></header>
+
+<aside class="filterBy col-lg-3 col-sm-12">
+    @*<div class="filter">
+        <span>Choose a Name</span>
+        <select class="nameFilter">
+            <option value="" selected>Select an Option</option>
+            <option value="victorian">victorian</option>
+            <option value="colonial">colonial</option>
+            <option value="cape cod">cape cod</option>
+        </select>
+    </div>*@
+
+    <div class="filter">
+        <span>Choose a Price Range</span>
+        <select class="priceFilter">
+            <option value="" selected>Select an Option</option>
+            <option value="0-49.99">0 - 49.99</option>
+            <option value="50-99.99">50 - 99.99</option>
+            <option value="100-149.99">100 - 149.99</option>
+        </select>
+    </div>
+
+    <div class="filter">
+        <span>Choose a ZipCode</span>
+        <select class="zipFilter">
+            <option value="" selected>Select an Option</option>
+            <option value="60655">60655</option>
+            <option value="61704">61704</option>
+            <option value="22222">22222</option>
+        </select>
+    </div>
+
+    <div class="filter">
+        <span>Number of Bedrooms</span>
+        <select class="bedFilter">
+            <option value="" selected>Select an Option</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+    </div>
+</aside>
+
+<div class="homeList col-lg-9 col-sm-12">
+    @foreach (var y in Model)
+    {
+        <article class="home-record col-lg-12 row">
+            <div class="col-lg-3">
+                <img class="homeImg" src="@y.Img" alt="home image" />
+            </div>
+            <div class="col-lg-6">
+                <header><h3 class="nameValue">@y.Name</h3></header>
+                <div>@Html.Label("Zipcode") <span class="zipValue">@y.Zip</span></div>
+                <div>@Html.Label("Bedrooms") <span class="bedValue">@y.Bedrooms</span></div>
+                
+            </div>
+            <div class="col-lg-3 myPrice">
+            <span class="highlight priceValue"><strong>$@y.Price</strong></span>
+            <span>@Html.ActionLink("More Info", "MoreInfo", "Search")</span>
+            </div>
+        </article>
+    }
+</div>

@@ -1,0 +1,17 @@
+﻿@model IEnumerable<HomeSearchApplication.Models.Lead>
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<header><h2>Thank you</h2></header>
+
+<p>your Information has been added!</p>
+
+<article class="thankyou">
+    @foreach (var item in Model)
+    {
+        <div><span>@item.Name</span><span>@item.Email</span><span>@item.Title</span></div>
+    }
+</article>

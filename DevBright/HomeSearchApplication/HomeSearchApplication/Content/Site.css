@@ -1,0 +1,156 @@
+﻿@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800);
+
+/* Table of Content
+==================================================
+	#Color Palette
+    #Generic Styles
+	#Navigation
+	#Typography
+    #Home
+    #Reuslts
+    #Thankyou
+
+*/
+
+/* #Color Palette
+================================================== 
+http://www.colourlovers.com/palette/4220292/Classic_Glam
+    BgColor #2c112b
+    Text    #565a5c
+    Header  #ff6c40
+    Price   #c72a40
+    Outline #ff6c40
+*/
+
+/* #Generic Styles
+================================================== */
+
+body {
+    margin:0;
+    background-color:#2c112b;
+    color:#565a5c;
+    font-size:16px;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+}
+
+body .container {
+    max-width:1000px;
+    margin: 0 auto;
+    margin-top:100px;
+    margin-bottom:75px;
+    padding:0;
+    background-color:#fff;
+    /*-webkit-box-shadow: 1px 2px 3px 3px #000;
+    box-shadow: 1px 2px 3px 3px #000;*/
+}
+
+.header-wrapper{background-color:#c72a40; padding:0;}
+
+.header-wrapper header {
+    position: relative;
+    height:300px;
+    overflow: hidden;
+    margin: 0;
+}
+
+.header-wrapper img {
+    display: inline-block;
+    width: 100%;
+    position: absolute;
+    left: 0%;
+}
+
+.footer-wrapper {padding:75px 20px; background-color:#000; }
+.footer-wrapper footer {margin:0 auto; width:65%; color:#fff;}
+
+.content {padding:20px;}
+
+/* #Typography
+================================================== */
+h1,h2,h3,h4,h5 {text-transform:uppercase;}
+h1 {font-size:3.8em; color:#2c112b;}
+h2 {font-size:2.3em; color:#2c112b; margin-left:20px;}
+h3 {font-size:1.3em; color:#2c112b; }
+
+.highlight {color:#c72a40;}
+
+
+/* #Home
+================================================== */
+.searchForm  {
+    margin:0 auto;
+    margin-bottom:10px;
+    margin-top:30px;
+    padding:5px;
+    width:85%;
+}
+
+.searchForm input[type=text] {
+    border:1px solid #ccc;
+    margin:9px 0;
+}
+
+.searchForm label {display:block;}
+
+/* #Reuslts
+================================================== */
+.filter {padding:20px 5px; border-left:1px solid #ccc; border-right:1px solid #ccc; border-top:1px solid #ccc;}
+.filter:last-child{ border-bottom:1px solid #ccc;}
+.filter span {display:block;}
+.priceValue {font-size:1.8em;}
+.home-record h3 {margin-top:0;}
+.home-record{border:1px solid #ccc; margin-bottom:20px; padding:15px 5px;}
+
+.myPrice a {
+    background-color:#520833; 
+    padding:7px 15px; 
+    color:#fff; 
+    font-weight:bold;
+    text-decoration:none;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    display:block;
+}
+
+div .homeImg {
+    width: 100px;
+    height:100px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border-radius: 10px 10px 10px 10px;
+}
+
+/* #More Info
+================================================== */
+.newsletterForm {
+    margin:0 auto;
+    margin-bottom:10px;
+    margin-top:30px;
+    padding:5px;
+    width:85%;
+}
+
+.newsletterInfo {width:65%; margin-bottom:20px;}
+
+.newsletterForm input[type=text] {
+    border:1px solid #ccc;
+    margin:9px 0;
+}
+
+/* #Thankyou
+================================================== */
+.thankyou span {display:block;}
+
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+/*input,
+select,
+textarea {
+    max-width: 280px;
+}*/

@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "MoreInfo";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<header><h2>Join Our Newsletter</h2></header>
+
+
+<article class="newsletterForm">
+    @using (Html.BeginForm("Create", "Search", FormMethod.Get))
+    {
+        <div>
+            @Html.Label("Name", "Name")
+            @Html.Editor("name")
+        </div>
+
+        <div>
+            @Html.Label("Email", "Email")
+            @Html.Editor("email")
+        </div>
+        <div>
+            @Html.Label("Title", "Title")
+            @Html.Editor("title")
+        </div>
+
+        <input type="submit" value="Click" />
+    }
+</article>

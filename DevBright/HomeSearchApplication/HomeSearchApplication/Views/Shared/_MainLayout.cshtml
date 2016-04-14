@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <script src="~/Scripts/jquery-1.10.2.js"></script>
+    <script src="~/Scripts/bootstrap.js"></script>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    <script src="~/Scripts/main.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Heading -->
+        <div class="header-wrapper col-lg-12">
+            <header><img src="~/Images/home.jpg" alt="heading image" /></header>
+        </div>
+        <!-- Heading -->
+        <section class="row content">
+            @RenderBody()
+        </section>
+        <!--Footing-->
+        <div class="footer-wrapper col-lg-12">
+            <footer>
+                <span>&reg; copryright 2016 Michael Whitfield</span>
+            </footer>
+        </div>
+        <!-- Footing -->
+    </div>
+</body>
+</html>

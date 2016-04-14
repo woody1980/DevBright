@@ -1,0 +1,18 @@
+﻿
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<h2>Welcome</h2>
+
+<article class="searchForm">
+    @using (Html.BeginForm("SearchResults", "Search", FormMethod.Get))
+    {
+        @Html.Label("Search", "Enter the Name of Your Home (Victorian, Colonial or Cape Cod)")
+        <span class="searchBy">@Html.Editor("name")</span>
+
+        <input type="submit" value="Click" />
+    }
+</article>
