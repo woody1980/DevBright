@@ -25,7 +25,7 @@ namespace HomeSearchApplication.Controllers
         public ActionResult SearchResults(string name)
         {
             var model = from t in _review
-                        where t.Name == name
+                        where t.Name.ToUpper() == name.ToUpper()
                         select t;
 
             return View(model);
